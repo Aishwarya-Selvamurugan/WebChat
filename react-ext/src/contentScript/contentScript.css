@@ -1,0 +1,269 @@
+/* Chatbot container */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Chat toggle button */
+.chat-toggle-button {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.chat-toggle-button:hover {
+  transform: scale(1.1);
+}
+
+/* Chat window */
+.chat-window {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  width: 320px;
+  height: 550px;
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slide-up 0.3s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat header */
+.chat-header {
+  background: #1d3557;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Chat body */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Message styling */
+.message {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 75%;
+  line-height: 1.4;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.message.user {
+  background: #0078d7;
+  color: white;
+  text-align: right;
+  align-self: flex-end;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message.bot {
+  background: white;
+  color: black;
+  text-align: left;
+  align-self: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  background: #1d3557;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Input box */
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 14px;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.chat-footer input::placeholder {
+  color: #aaa;
+}
+
+/* Send button */
+.chat-footer button {
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.chat-footer button:hover {
+  transform: scale(1.1);
+}
+
+/* Form container styling */
+.chat-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+/* Form fields styling */
+.chat-form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  background: #f7f7f7;
+}
+
+.chat-form-input::placeholder {
+  color: #aaa;
+}
+
+/* Form button */
+.chat-form-button {
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease-in-out;
+}
+
+.chat-form-button:hover {
+  background: #005a93;
+}
+
+/* Animation */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* <==== POP UP ====> */
+
+.auth-form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  z-index: 1000;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.auth-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.auth-input {
+  width:95%;
+  padding: 10px 10px; 
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.auth-input:focus {
+  border-color: #0078d4;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 120, 212, 0.5);
+}
+
+.auth-submit-btn {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+  background-color: #005bb5;
+}
+
+.auth-cancel-btn {
+  background-color: transparent;
+  color: #0078d4;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.auth-cancel-btn:hover {
+  color: #005bb5;
+}
